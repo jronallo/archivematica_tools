@@ -1,0 +1,13 @@
+== Archivematica Tools
+
+Archivematica Tools are meant to be a collection of tools for working with the
+packages output from Archivematica. Right now this involves parsing and extracting
+metadata from the METS file.
+
+== Author
+
+Jason Ronallo
+
+== Copyright
+
+Copyright (c) 2011 North Carolina State University. See LICENSE for details.
