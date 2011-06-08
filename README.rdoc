@@ -6,20 +6,23 @@ some minimal metadata from the METS file for preservation and access purposes.
 
 == Example
 
-require 'archivematica_tools'
-mets = File.open('spec/examples/METS.xml', 'r')
-package = ArchivematicaTools::Package.new(mets)
-package.instance_variables
- #=> ["@identifier", "@derivatives", "@resources", "@mets"]
+  require 'archivematica_tools'
+  mets = File.open('spec/examples/METS.xml', 'r')
+  package = ArchivematicaTools::Package.new(mets)
+  package.instance_variables
+    #=> ["@identifier", "@derivatives", "@resources", "@mets"]
 
-package.identifier #=> "sampleSIP-ac597c16-c47b-4ca2-aa3b-8629bd4c8a45"
-resource = package.resources.first
-
-resource.instance_variables
- #=> ["@package_filename", "@checksum", "@digiprov", "@original_filepath", "@relationship_subtype", "@date_modified", "@mimetypes"]
+  package.identifier 
+    #=> "sampleSIP-ac597c16-c47b-4ca2-aa3b-8629bd4c8a45"
+  resource = package.resources.first
   
-resource.checksum #=> "b794e283d7f6552717a7311f13bdbedc84945caca7b0203b212c71542a1beb1b"
-resource.mimetypes #=> ["video/mpeg"]
+  resource.instance_variables
+    #=> ["@package_filename", "@checksum", "@digiprov", "@original_filepath", "@relationship_subtype", "@date_modified", "@mimetypes"]
+    
+  resource.checksum 
+    #=> "b794e283d7f6552717a7311f13bdbedc84945caca7b0203b212c71542a1beb1b"
+  resource.mimetypes 
+    #=> ["video/mpeg"]
 
 
 == Author
